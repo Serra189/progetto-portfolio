@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Document</title>
+    <!--è un commento-->
+</head>
+<body>
+
+    <!-- RICORDO CHE STIAMO SVILUPPANDO GUARDANDO IL LAYOUT DATO DA UN DESIGNER-->
+
+    <header class="header"> <!--intestanzione del sito-->
+        <div class="container header-container">
+            <div class="logo">Pippo Baudo</div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+            </nav> <!--serve per creare un menù-->
+        </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-content"> <!--posso mettere più classi nei tag-->
+        <h1>Hi, I'm<br>Pippo Baudo</h1>
+        <h3>Nulla facente<br>based in Modena</h3>
+        <a class="hero-cta" href="#">Discover my works</a>
+      </div>
+    </section>
+
+    <section class="works-menu">
+        <div class="container">
+            <ul>
+                <li><a class="button" href="#ttg">Trough the glass</a></li>
+                <li><a class="button" href="#nl">Neon Lights</a></li>
+                <li><a class="button" href="#lt">Light Trails</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="works">
+        <a class="anchors" id="works"></a> <!--hack per traslare la pagina in basso, in questo modo non abbiamo il works-menu sugli elementi-->
+        <div class="container">
+
+            <!--Work item 1-->
+            <div class="works-item">
+                <a class="anchors" id="ttg"></a>
+                <div class="works-item-tags">Street Photography \ London \ 2020</div>
+                <h2>Through the glass</h2>
+
+                <div class="work-info">
+                    <div class="work-info-label">About</div>
+                    <div class="work-info-content">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, beatae.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-info">
+                    <div class="work-info-label">Output</div>
+                    <div class="work-info-content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At veritatis incidunt unde eum inventore ut voluptatum odio, fuga eos consectetur optio, delectus reiciendis impedit voluptatem ea quo ipsam mollitia! Magnam.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="images">
+                    <img class="image-right" src="images/IMG_4033.JPG" alt="">
+                    <img src="images/IMG_4035.JPG" alt="">
+                    <img class="image-left" src="images/IMG_4036.JPG" alt="">
+                </div>
+
+            </div>
+
+            <!--Work item 2-->
+            <div class="works-item">
+                <a class="anchors" id="nl"></a>
+                <div class="works-item-tags">Street Photography \ Rome \ 2019</div>
+                <h2>Pippo Pippa</h2>
+
+                <div class="work-info">
+                    <div class="work-info-label">About</div>
+                    <div class="work-info-content">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, beatae.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-info">
+                    <div class="work-info-label">Output</div>
+                    <div class="work-info-content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At veritatis incidunt unde eum inventore ut voluptatum odio, fuga eos consectetur optio, delectus reiciendis impedit voluptatem ea quo ipsam mollitia! Magnam.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="images">
+                    <img class="image-left" src="images/IMG_4035.JPG" alt="">
+                    <img class="image-right" src="images/IMG_4037.JPG" alt="">
+                    <img class="image-left" src="images/IMG_4033.JPG" alt="">
+                </div>
+
+            </div>
+
+            <!--Work item 3-->
+            <div class="works-item">
+                <a class="anchors" id="lt"></a>
+                <div class="works-item-tags">Street Photography \ New York \ 2018</div>
+                <h2>ALBANOO Pluto</h2>
+
+                <div class="work-info">
+                    <div class="work-info-label">About</div>
+                    <div class="work-info-content">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, beatae.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-info">
+                    <div class="work-info-label">Output</div>
+                    <div class="work-info-content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At veritatis incidunt unde eum inventore ut voluptatum odio, fuga eos consectetur optio, delectus reiciendis impedit voluptatem ea quo ipsam mollitia! Magnam.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="images">
+                    <img class="image-right" src="images/IMG_4037.JPG" alt="">
+                    <img class="image-left" src="images/IMG_4036.JPG" alt="">
+                    <img class="image-right" src="images/IMG_4033.JPG" alt="">
+                </div>
+
+            </div>
+
+            <section class="contacts">
+                <a class="anchors" id="contacts"></a>
+                <div class="container contacts-content">
+                    <div class="contacts-about">
+                        <h2>about me</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ducimus, facilis qui autem mollitia excepturi?</p>
+                    </div>
+                    <div class="contacts-form">
+                        <!--<input type="text" placeholder="Name and Surname" > PLACEHOLDER serve per mettere del testo all'interno del input, ovviamente tale testo scompare quando tu vai a scriverci sopra-->
+                        <!--se vogliamo prevalorizzare l'input possiamo mettere value="Filippo", in questo modo il text avrà già al suo interno tale valore, in questo caso però non è inutile -->
+                        <!--per vedere gli attributi assegnabili agli input per validare i dati possiamo andare sulla pagina web di Mozilla in form-validations-->
+                        
+                        <form name="contacts" netlify action="">
+                            <label class="input-label" for="">full name</label>
+                            <input class="input-field" type="text" name="name" placeholder="Name Surname" required> <!--l'attributo required serve per definire un campo obbligatorio-->
+
+                            <label class="input-label" for="">Email</label>
+                            <input class="input-field" type="email" name="email" placeholder="example@mail.com" required>
+                            <!--il type="email" riconosce già se quella inserità e un email valida o no, in base alla presenza della @-->
+
+                            <label class="input-label" for="">Subject</label>
+                            <input class="input-field" type="text" name="subject" placeholder="Example subject" required>
+
+                            <label class="input-label" for="">Message <span >Optional (max lenght 500)</span></label>
+                            <textarea class="input-textarea" name="message" placeholder="Write here" maxlength="500"></textarea>
+                            <!--maxlenght definisce il numero massimo di caratteri che si possono imettere nella text area-->
+
+                            <button class="button">Send</button>
+                        </form>
+
+                     </div>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="copyright">Pippo Baudo copyright © 2021</div>
+        </div>
+    </footer> <!--è il piè di pagina, dove si mette generealmente il copyright-->
+
+    <div id="backBTN" class="back-to-top"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

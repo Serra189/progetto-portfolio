@@ -1,0 +1,334 @@
+*{ /*è il nostro reset, viene applicato a tutti gli elementi html*/
+    box-sizing: border-box; /*se definiamo dimensioni comprendono anche padding e borsi*/
+    margin: 0; /*azzeriamo tutti i margini*/
+    padding: 0; /*azzeriamo tutti i padding*/
+}
+
+body{
+    background-color: #070514;
+    color: #ffffff;
+    font-family: 'Work Sans', sans-serif;
+    font-size:100%; /*di default i browsers hanno come font-size 16px, in questo modo dico di adattarsi al 100% alla font-size del browser, quindi 16 px*/ 
+}
+
+h1, h2, h3 { /*in questo modo posso applicare a tutti e  3, dividendoli con una virgola*/
+    margin-bottom: 48px;
+}
+
+h1 {
+    font-size: 96px; 
+    font-weight: 600; /*grassetto*/
+    line-height: 113px; /*interlinea*/
+}
+
+@media screen and (max-width: 572px){
+
+    h1{
+        font-size: 48px;
+        line-height: 56px;
+    }
+}
+
+h2 {
+    font-size: 64px; 
+    font-weight: 600; /*grassetto*/
+    line-height: 75px; /*interlinea*/
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 572px){
+    h2{
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+h3 {
+    font-size: 48px; 
+    font-weight: normal; /*grassetto*/
+    line-height: 56px; /*interlinea*/
+}
+
+@media screen and (max-width: 572px){
+    h3{
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
+a {
+    font-size: 36px; 
+    font-weight: 600; /*grassetto*/
+    line-height: 42px; /*interlinea*/
+    color: #ffffff;
+    text-decoration: none; /*tolgo la sottolineatura del link*/
+    text-transform: uppercase;
+}
+
+a:hover{ /*proprietà speciale, quando passo sopra al link viene attivata*/
+    color:#BEDA10;
+}
+
+@media screen and (max-width: 572px){
+    a{
+        font-size: 20px ; 
+    }
+}
+
+p{
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 572px){
+    p{
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+}
+
+.button{
+    background-color: #8279BB;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase; /*tutto maiuscolo*/
+    padding: 12px 24px; /*12px è per top e bottom, 24px è per left e right*/
+    border: none;
+    border-radius: 36px;
+}
+
+.button:hover{ /*quando passo con il mouse sopra al bottone viene attivata questa proprietà che sovrascrive le impostazione della classe button*/
+    background-color: #BEDA10;
+    color: #070514;
+}
+
+.input-label{
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.input-label span{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.input-textarea,
+.input-field{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    color: #757575;
+    background-color: #0e0062;
+    padding: 12px 16px; /*12px per TOP e BOTTOM, 16px per RIGHT e LEFT*/
+    width: 100%;
+    border: none; /*togliamo i bordi*/
+    border-radius: 30px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.input-textarea{
+    height: 100px;
+}
+
+.container{
+    width: 80%; /*mettiamo la larghezza dell'80% della viewport*/
+    margin-right: auto; /*queste due istruzioni serve per mettere il div al centro*/
+    margin-left: auto; /*non della pagina ma della prima "riga"*/
+    max-width: 1140px; /*per non perdere il layout in caso di risoluzioni molto elevate, è una cosa standard*/
+}
+
+section{
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.hero{
+    height: 100vh; /*impostiamo l'altezza pari a tutta la viewport*/
+    background: linear-gradient(0deg, rgba(7,5,20,1) 0%, rgba(16,26,98,1) 30%);
+}
+
+.hero-content{
+    height: 100%; /*impostiamo l'altezza pari all'altezza del contenitore padre, ovvero l'altezza di tutta la section*/
+    display: flex; /*rendiamo il display flex*/
+    flex-direction: column; /*Main axis diventa l'asse verticale*/
+    justify-content: center; /*mette gli item al centro*/
+}
+
+.hero-cta{
+    align-self: flex-end; /*metto il link alla fine del div, quindi a destra*/
+}
+
+/*header*/
+.header{
+    position: fixed; /*per far in modo che se scorriamo la pagina rimane in quella posizione*/
+    top: 0; /*tutto in alto*/
+    left: 0; /*tutto a sinistra*/
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(9,2,49)100%); /*vedere su CSS Gradient*/
+    z-index: 5; /*ancorando il works-menu abbiamo visto che va a coprire l'header, e i link non sono più cliccabili, utilizzando questa istruzione riportiamo l'header in primo piano*/
+}
+
+.header-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 42px;
+    text-transform: uppercase;
+    margin-right: 64px;
+}
+
+.menu ul{
+    list-style-type: none; /*serve per togliere i pallini della lista*/
+    display: flex;
+}
+
+.menu ul li{
+    margin-right: 24px; /*do un margine destro di 24px*/
+}
+
+.menu ul li a{
+    font-size: 24px;
+}
+
+.works-menu{
+    position: sticky; /*possiamo definire un comportamento di ancoraggio, quando l'elemento cerca di uscire dal viewport rimarrà ancorato ad un aposizione che definiremo*/
+    top: -15px;
+}
+
+@media screen and (max-width: 768px){
+    .works-menu{
+        display: none; /*serve per nascondere il menu di navigazione*/
+    }
+}
+
+.works-menu ul{
+    list-style-type: none; /*tolgo i pallini dell'elenco puntato*/
+    display:flex;
+}
+
+.works-menu ul li{
+    margin-right: 24px;
+}
+
+/*.works{
+
+}*/
+
+.works-item{
+    margin-bottom: 96px;
+}
+
+.works-item-tags{
+    font-size: 24px;
+    color:#BEDA10;
+}
+
+.work-info{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.work-info-label{
+    text-transform: uppercase;
+    width: 200px;
+    flex-grow: 0; /*in questo modo anche aumentando la width del display il div non aumenta ma rimane fisso a 200px*/
+    flex-shrink: 1; /*in questo modo la label può diminuire, quindi può andare sotto ai 200px*/
+    font-weight: 600;
+}
+
+.work-info-content{
+    width: 70%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.images img{
+    max-width: 100%;
+    max-height: 1000px;
+    margin-bottom: 36px;
+}
+/*
+@media screen and (max-width: 572px){
+    .images img{
+        max-width: 380px;
+    }
+}
+*/
+.image-right{
+    align-self: flex-end;
+}
+
+.image-left{
+    align-self: flex-start;
+}
+
+/*.contacts{
+
+}*/
+
+.contacts-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts-about,
+.contacts-form{
+    width: 40%;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+@media screen and (max-width: 768px){
+    .contacts-content{
+        flex-direction: column;
+    }
+
+    .contacts-about,
+    .contacts-form{
+        width:100%;
+    }
+}
+
+.footer{
+    background-image: linear-gradient(180deg, rgba(7,5,20,1) 0%, rgba(16,26,98,1) 100%);
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.copyright{
+    color: #757575;
+
+}
+
+.anchors{
+    visibility: hidden; /*disattiviamo la visibilità, lo mettiamo nascosto*/
+    position: relative; /*cambiando da static a relative possiamo assegnare la posizione che più ci aggrada, top, bottom*/
+    top: -150px;
+}
+
+.back-to-top{
+    background-image: url('images/foto\ cv\ 3.jpeg');
+    background-repeat: no-repeat; /*facciamo ripetere l'immagine un unica volta*/
+    background-position: center center ; /*posizioniamo l'immagine al centro (per x) e al centro (per y) rispetto al div*/
+    background-color: #8279BB;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer; /*quando ci andiamo sopra il cursore diventa la manina cliccabile*/
+    display: none;
+}
